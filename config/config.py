@@ -1,0 +1,5 @@
+# config/config.py
+
+SERVER_NAME = "DESKTOP-CFN92PN\\MSSQLSERVER2"
+DATABASE_NAME = "myFitnessApp"
+DATA_FOLDER = "data/"

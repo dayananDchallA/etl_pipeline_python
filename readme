@@ -1,0 +1,27 @@
+Here’s a brief explanation of each file and folder:
+----------------------------------------------------------------
+config/: Stores configurations in config.py, including database connection settings and other constants. You can use a dictionary or a library like pydantic for configuration management.
+
+etl/: Contains separate files for the extractor, transformer, and loader classes, following the Single Responsibility Principle. This makes each ETL component modular and self-contained.
+
+db/: Contains connection.py, which provides database connection functionality encapsulated in the DatabaseConnection class.
+
+data/: A directory to store the input data (CSV files) used for the ETL process.
+
+tests/: Contains unit tests for each ETL component. The tests ensure that each class (extractor, transformer, loader, and pipeline) works as expected.
+
+main.py: The main entry point for running the ETL pipeline, responsible for initializing and running all components.
+
+Explanation of Directory Structure
+-------------------------------------------
+Each ETL component (extraction, transformation, loading) is modular and resides in the etl/ folder.
+config/config.py centralizes all configurations.
+db/connection.py centralizes database connection logic, enhancing reusability.
+tests/ folder holds test files, following best practices for unit testing.
+main.py is the entry point, pulling together configurations, initializing classes, and executing the pipeline.
+
+
+Run all tests using:
+--------------------------------------------
+python -m unittest discover tests
+
